@@ -1,0 +1,167 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-title h1 {
+    margin: 0;
+}
+
+.file-upload-container {
+    margin-left: auto;
+}
+
+.upload-box {
+    background-color: #0056b3;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745; /* Verde para éxito */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #007BFF;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#filtersContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px; /* Espaciado entre los filtros */
+}
+
+.filter-box {
+    background-color: #f0f4f8; /* Fondo claro */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.filter-box label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.filter-box select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #d1d9e6;
+    background-color: white;
+    font-size: 14px;
+}
+
+.filter-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #0056b3;
+}
+
+.filter-button:active {
+    background-color: #004080;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    #filtersContainer {
+        flex-direction: column;
+    }
+
+    .filter-box {
+        margin-bottom: 15px; /* Espaciado entre cajas de filtro */
+    }
+
+    .header-container {
+        flex-direction: column; /* Apilar elementos en la cabecera */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .file-upload-container {
+        margin-left: 0; /* Centrar contenedor de carga en móvil */
+        margin-top: 10px; /* Espaciado superior */
+    }
+}
+
+@media (max-width: 480px) {
+    .notification {
+        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+        padding: 10px; /* Menos padding */
+        top: 10px; /* Ajustar posición superior */
+        right: 10px; /* Ajustar posición derecha */
+    }
+
+    .filter-button {
+        padding: 10px; /* Botones más grandes en móvil */
+        font-size: 16px; /* Aumentar tamaño de fuente */
+    }
+
+    th, td {
+        padding: 6px; /* Ajustar padding en celdas */
+    }
+
+    table {
+        font-size: 12px; /* Ajustar tamaño de fuente de la tabla */
+    }
+}

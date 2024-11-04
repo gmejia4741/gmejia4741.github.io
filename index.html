@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <title>Ejemplo Dashboard</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="static/logo.png" alt="Logo de la empresa" class="logo">
+            <div class="header-title">
+                <h1>Ejemplo Dashboard</h1>
+                <p>Una breve explicación del funcionamiento del dashboard.</p>
+            </div>
+            <div class="file-upload-container">
+                <div class="upload-box">
+                    <input type="file" id="fileInput" accept=".csv, .xlsx">
+                    <button id="uploadButton">Cargar Archivo</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="notification" class="notification hidden"></div> <!-- Área de notificación -->
+    <main>
+        <div id="previewContainer"></div> <!-- Contenedor para la vista previa -->
+    </main>
+
+    <div id="filtersContainer">
+        <div class="filter-box">
+            <label for="areaFilter">Filtrar por Área:</label>
+            <select id="areaFilter" multiple></select>
+            <button id="applyAreaFilter" class="filter-button">Aplicar Filtro</button>
+            <button id="resetAreaFilter" class="filter-button">Restablecer</button>
+        </div>
+        <div class="filter-box">
+            <label for="responsibleFilter">Filtrar por Responsable:</label>
+            <select id="responsibleFilter" multiple></select>
+            <button id="applyResponsibleFilter" class="filter-button">Aplicar Filtro</button>
+            <button id="resetResponsibleFilter" class="filter-button">Restablecer</button>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
+
+
